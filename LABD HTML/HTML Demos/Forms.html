@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+
+    <style>
+        body {
+            background-color: antiquewhite;
+            width: 1000px;
+            margin-left: 150px;
+        }
+
+        form {
+            border: 2px solid;
+            border-collapse: collapse;
+            background-color: azure;
+        }
+
+        td {
+            font-size: x-large;
+            padding: 15px;
+        }
+
+        tr {
+            font-size: 20px;
+        }
+
+        input,
+        select {
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <form>
+            <u>
+                <h1 style="color: blue; font-style: italic;">REGISTRATION FORM</h1>
+            </u>
+            <table>
+                <tr>
+                    <td><label for="">Enter Student Name:</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Email:</label></td>
+                    <td><input type="email" placeholder="Enter Your Email"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Date of Birth:</label></td>
+                    <td><input type="date"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="">Phone Number</label></td>
+                    <td><input type="tel"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="">Gender:</label></td>
+                    <td>
+                        <label>Male</label>
+                        <input type="radio" name="gen">
+                        <label>Female</label>
+                        <input type="radio" name="gen">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="">Address:</label></td>
+                    <td><input type="text"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="">Highest Degree:</label></td>
+                    <td><select name="Highest Degree" id="">
+                            <option value="">Enter Degree</option>
+                            <option value="">B.Tech</option>
+                            <option value="">B.com</option>
+                            <option value="">Bsc</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><label for="">Upload Your Resume:</label></td>
+                    <td><input type="file"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="">Hobbies:</label></td>
+                    <td><input type="checkbox">Sports <input type="checkbox">Traveling</td>
+                </tr>
+
+                <tr>
+                    <td><label for="">Age:</label></td>
+                    <td><input type="range" min="0" max="100" value="50" step="1"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align: center; padding-top: 50px;"><input
+                            style="color: red; border-radius: 6px; font-size: 20px;" type="reset"> &nbsp &nbsp &nbsp
+                        &nbsp
+                        <input style="color: green; border-radius: 6px; font-size: 20px;" type="submit">
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+    </center>
+
+    <br><br><br>
+
+    <div>
+        <img src="./Car.jfif" alt="">
+
+        <br><br>
+        <video src="./video1.mp4" controls autoplay muted></video>
+
+        <br><br>
+
+        <iframe width="800" height="400" src="https://www.youtube.com/embed/vKq3cRvEA6Q" frameborder="0"></iframe>
+        <br><br><br>
+
+        <!-- <iframe width="656" height="369" src="https://www.youtube.com/embed/vKq3cRvEA6Q" title="Ascendion and AI"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+    </div>
+
+    <form action="">
+        <table>
+            <tr>
+                <td><label for="">Enter Student Name:</label></td>
+                <td><input type="text" style="background-color: red"></td>
+            </tr>
+            <p style="background-color: blueviolet ; color: blue;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto facere atque qui ea, beatae ducimus unde.
+                Rerum, quos nisi sed accusantium debitis accusamus dolores ipsa quia! Omnis eius tenetur impedit.</p>
+        </table>
+    </form>
+
+
+</body>
+
+</html>
