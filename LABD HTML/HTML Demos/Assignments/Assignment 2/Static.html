@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form with Pop-Up</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            padding: 50px;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="radio"],
+        select {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .popup {
+            display: none;
+            position: absolute;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .popup.show {
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8f9fa;
+        }
+
+        .section-title {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #666;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Registration Form</h1>
+        <form id="dataForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" value="John Doe"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" value="john@example.com"><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" value="+1234567890"><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" value="30"><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" value="123 Main St"><br>
+
+            <label for="occupation">Occupation:</label>
+            <input type="text" id="occupation" value="Software Developer"><br>
+
+            <label for="country">Country:</label>
+            <select id="country">
+                <option value="USA">USA</option>
+                <option value="India" selected>India</option>
+                <option value="Canada">Canada</option>
+            </select><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender">
+                <option value="Male" selected>Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select><br>
+
+            <label class="section-title">Hobbies:</label>
+            <label><input type="checkbox" id="hobby1" value="Reading" checked> Reading</label><br>
+            <label><input type="checkbox" id="hobby2" value="Traveling"> Traveling</label><br>
+            <label><input type="checkbox" id="hobby3" value="Sports"> Sports</label><br>
+
+            <label class="section-title">Marital Status:</label>
+            <label><input type="radio" name="maritalStatus" id="single" value="Single" checked> Single</label>
+            <label><input type="radio" name="maritalStatus" id="married" value="Married"> Married</label><br>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <div id="popup" class="popup">
+        <h2>Form Data</h2>
+        <table id="popupContent">
+            <!-- Table content will be injected here -->
+        </table>
+    </div>
+
+    <script>
+        function submitForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const age = document.getElementById('age').value;
+            const address = document.getElementById('address').value;
+            const occupation = document.getElementById('occupation').value;
+            const country = document.getElementById('country').value;
+            const gender = document.getElementById('gender').value;
+            
+            const hobbies = [];
+            if (document.getElementById('hobby1').checked) hobbies.push('Reading');
+            if (document.getElementById('hobby2').checked) hobbies.push('Traveling');
+            if (document.getElementById('hobby3').checked) hobbies.push('Sports');
+            
+            const maritalStatus = document.querySelector('input[name="maritalStatus"]:checked').value;
+
+            const data = [];
+
+            if (name) data.push({ label: 'Name', value: name });
+            if (email) data.push({ label: 'Email', value: email });
+            if (phone) data.push({ label: 'Phone', value: phone });
+            if (age) data.push({ label: 'Age', value: age });
+            if (address) data.push({ label: 'Address', value: address });
+            if (occupation) data.push({ label: 'Occupation', value: occupation });
+            if (country) data.push({ label: 'Country', value: country });
+            if (gender) data.push({ label: 'Gender', value: gender });
+            if (hobbies.length) data.push({ label: 'Hobbies', value: hobbies.join(', ') });
+            if (maritalStatus) data.push({ label: 'Marital Status', value: maritalStatus });
+
+            const popupContent = document.getElementById('popupContent');
+            popupContent.innerHTML = ''; // Clear previous content
+
+            data.forEach(row => {
+                const tableRow = document.createElement('tr');
+                const labelCell = document.createElement('td');
+                const valueCell = document.createElement('td');
+
+                labelCell.textContent = row.label;
+                valueCell.textContent = row.value;
+
+                tableRow.appendChild(labelCell);
+                tableRow.appendChild(valueCell);
+                popupContent.appendChild(tableRow);
+            });
+
+            const popup = document.getElementById('popup');
+            popup.classList.add('show');
+        }
+    </script>
+
+</body>
+</html>

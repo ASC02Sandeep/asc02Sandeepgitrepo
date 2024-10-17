@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var veggies = ["Carrot", "Broccoli", "Spinach", "Kale"];
+        for (var i = 0; i < veggies.length; i++) {
+            console.log(veggies[i]);
+        }
+        var healthColors = [["Carrot", "Orange"], ["Broccoli", "Green"], ["Spinach", "Green"], ["Kale", "Green"]];
+        healthColors.push(["Blueberry","Blue"]);
+        healthColors.push(["Blackberry","Black"]);
+        for(var i=0; i<healthColors.length;i++){
+            console.log(healthColors[i][0]+"-"+healthColors[i][1]);
+        }
+
+        // to get the entire array
+        console.log("healthColors:",healthColors);
+
+        //to add an element in the particular index(2), and (0) indicates we are not deleting anything
+        healthColors.splice(2,0,["Mango","Yellow"]);
+        console.log("healthColors:",healthColors);
+        
+        //use this method to delete the entire array
+        healthColors.length=0;
+
+        //It will remove the last element
+        healthColors.pop();
+        
+        //to remove the first element
+        healthColors.shift();
+
+        // to remove a particular element or a range(like 1 or 2,3..)
+        healthColors.splice(2,1);
+        // or fruits = fruits.filter(fruit => fruit !== "Banana");
+
+        //to push an element at last use below
+        healthColors.push(["banana"]);
+
+        //to reverse the entire array
+        healthColors.reverse();
+
+        console.log("healthColors:",healthColors);
+        
+        //concating multiple arrays
+        var fru=["Apple","Pine","Guava"];
+        var dairy=["milk","cheese"];
+        var ice=["vannila","chocklate","Butter"];
+        var combined=fru.concat(dairy,ice);
+        console.log(combined);
+
+        //shift
+        combined.shift();
+
+        //unshift
+        combined.unshift("Avacado");
+
+        //slice 
+        var slicecom=combined.slice(0,1);
+        console.log(slicecom);
+
+        console.log(healthColors.slice(1,3));
+
+        //join
+        console.log(combined.join());
+        console.log(combined.join(' '));
+        console.log(combined.join('-'));
+        console.log(combined.join(''));
+         
+        //indexof
+        console.log(combined.indexOf("Pine"));
+
+        // var index = fruits.indexOf("Banana", 2);
+        // console.log(index);
+
+
+        //lastIndexOf
+        console.log(combined.lastIndexOf("milk"));
+
+        //includes
+        console.log(combined.includes("Apple"));
+
+        //sort
+        console.log(combined.sort());
+        
+        //sort
+        var numbers = [10, 2, 5, 1, 4];
+        numbers.sort((a, b) => a - b);
+        console.log(numbers);
+        
+
+        //filter
+        var numbers = [1, 2, 3, 4, 5, 6];
+        var evenNumbers = numbers.filter(num => num % 2 === 0);
+        console.log(evenNumbers);
+
+        //map
+        var numbers = [1, 2, 3, 4, 5];
+        var doubledNumbers = numbers.map(num => num * 2);
+        console.log(doubledNumbers);
+
+        //reduce
+        var numbers = [1, 2, 3, 4, 5];
+        var sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        console.log(sum);
+
+        
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

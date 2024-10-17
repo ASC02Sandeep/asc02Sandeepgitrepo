@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function updateTestPara() {
+            // get the testpara element
+            var testParaElement = document.getElementById("testPara");
+            testParaElement.innerHTML = " <div style='color:red;'> Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>"
+        }
+
+        function GetSearch() {
+            var testVideo = document.getElementById("Search");
+            testVideo.innerHTML = "<a href='https://www.youtube.com/' target='_blank'>youtube</a>";
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return false">
+        <p id="testPara">
+            <b>lorem text here</b>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus quisquam perspiciatis officiis
+            asperiores saepe, iure sint illum animi provident libero.
+        </p>
+        <!-- onclick event/responds to user actions -->
+        <button onclick="updateTestPara()">Insert Lorem text</button>
+
+
+        <button id="Search" onclick="GetSearch()">Click Here</button>
+
+
+    </form>
+    <br>
+    <h3>Select Action</h3>
+    <button onclick="document.getElementById('dropdown').style.display='block'">Show More Actions</button>
+
+    <div id="dropdown" style="display:none;">
+        <button onclick="window.location.href='https://www.youtube.com/'">YouTube</button><br>
+        <button onclick="window.location.href='https://chat.openai.com'">ChatGpt</button><br>
+        <button onclick="window.location.href='https://www.google.com'">Google</button><br>
+    </div>
+    <br>
+    <center>
+
+        <form>
+            <table>
+                <tr>
+                    <td><label for="">Select Your Search</label></td>
+                    <td><select name="Highest Degree" id="">
+                            <option value="">Select Your Search</option>
+                            <button id="Search" onclick="GetSearch()">Click Here</button>
+                            <option id="Search" onclick="GetSearch()" value="">Youtube</option>
+                            <option value="">ChatGpt</option>
+                            <option value="">Copilot</option>
+                        </select></td>
+                </tr>
+
+
+            </table>
+        </form>
+    </center>
+
+</body>
+
+</html>
