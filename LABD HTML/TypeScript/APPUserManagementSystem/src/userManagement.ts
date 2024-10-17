@@ -18,7 +18,7 @@ export class UserManagement{
         // this.users = this.users.find(user => user.id === id);
         this.users = this.users.filter(user => user.id ==id);
         console.log(`User with id ${id} searched successfully`);
-        
+        // console.log(users);
     }
     
     
