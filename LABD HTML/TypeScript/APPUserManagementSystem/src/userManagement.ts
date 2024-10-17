@@ -13,4 +13,13 @@ export class UserManagement{
         this.users = this.users.filter(user => user.id !==id);
         console.log(`User with id ${id} removed successfully`);
     }
+
+    searchUser(id:number):void{
+        // this.users = this.users.find(user => user.id === id);
+        this.users = this.users.filter(user => user.id ==id);
+        console.log(`User with id ${id} searched successfully`);
+        
+    }
+    
+    
 }

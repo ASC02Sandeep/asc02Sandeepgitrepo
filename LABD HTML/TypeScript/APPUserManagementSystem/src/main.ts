@@ -42,3 +42,9 @@ users=userManagement.listUsers();
 console.log(users);
 
 
+console.log("search user by id")
+
+userManagement.searchUser(2);
+users=userManagement.listUsers();
+console.log(users);
+
