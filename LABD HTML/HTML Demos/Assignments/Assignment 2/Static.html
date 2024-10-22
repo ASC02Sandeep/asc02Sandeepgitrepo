@@ -164,7 +164,7 @@
     <div id="popup" class="popup">
         <h2>Form Data</h2>
         <table id="popupContent">
-            <!-- Table content will be injected here -->
+            
         </table>
     </div>
 
@@ -200,7 +200,7 @@
             if (maritalStatus) data.push({ label: 'Marital Status', value: maritalStatus });
 
             const popupContent = document.getElementById('popupContent');
-            popupContent.innerHTML = ''; // Clear previous content
+            popupContent.innerHTML = ''; 
 
             data.forEach(row => {
                 const tableRow = document.createElement('tr');

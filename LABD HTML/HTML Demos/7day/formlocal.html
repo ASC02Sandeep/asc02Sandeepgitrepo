@@ -37,82 +37,87 @@
 
 <body>
     <center>
-        <form>
+        <form id="registrationForm" onsubmit="storeData(event)">
             <u>
                 <h1 style="color: blue; font-style: italic;">REGISTRATION FORM</h1>
             </u>
             <table>
                 <tr>
-                    <td><label for="">Enter Student Name:</label></td>
-                    <td><input type="text"></td>
+                    <td><label for="studentName">Enter Student Name:</label></td>
+                    <td><input type="text" id="studentName"></td>
                 </tr>
                 <tr>
-                    <td><label for="">Email:</label></td>
-                    <td><input type="email" placeholder="Enter Your Email"></td>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" placeholder="Enter Your Email"></td>
                 </tr>
                 <tr>
-                    <td><label for="">Date of Birth:</label></td>
-                    <td><input type="date"></td>
-                </tr>
-
-                <tr>
-                    <td><label for="">Phone Number</label></td>
-                    <td><input type="tel"></td>
+                    <td><label for="dob">Date of Birth:</label></td>
+                    <td><input type="date" id="dob"></td>
                 </tr>
 
                 <tr>
-                    <td><label for="">Gender:</label></td>
+                    <td><label for="phone">Phone Number</label></td>
+                    <td><input type="tel" id="phone"></td>
+                </tr>
+
+                <tr>
+                    <td><label>Gender:</label></td>
                     <td>
                         <label>Male</label>
-                        <input type="radio" name="gen">
+                        <input type="radio" name="gender" value="Male">
                         <label>Female</label>
-                        <input type="radio" name="gen">
+                        <input type="radio" name="gender" value="Female">
                     </td>
                 </tr>
 
                 <tr>
-                    <td><label for="">Address:</label></td>
-                    <td><input type="text"></td>
+                    <td><label for="address">Address:</label></td>
+                    <td><input type="text" id="address"></td>
                 </tr>
 
                 <tr>
-                    <td><label for="">Highest Degree:</label></td>
-                    <td><select name="Highest Degree" id="">
+                    <td><label for="degree">Highest Degree:</label></td>
+                    <td><select id="degree">
                             <option value="">Enter Degree</option>
-                            <option value="">B.Tech</option>
-                            <option value="">B.com</option>
-                            <option value="">Bsc</option>
+                            <option value="B.Tech">B.Tech</option>
+                            <option value="B.com">B.com</option>
+                            <option value="Bsc">Bsc</option>
                         </select></td>
                 </tr>
                 <tr>
-                    <td><label for="">Upload Your Resume:</label></td>
-                    <td><input type="file"></td>
+                    <td><label for="resume">Upload Your Resume:</label></td>
+                    <td><input type="file" id="resume"></td>
                 </tr>
 
                 <tr>
-                    <td><label for="">Hobbies:</label></td>
-                    <td><input type="checkbox">Sports <input type="checkbox">Traveling</td>
+                    <td><label for="hobbies">Hobbies:</label></td>
+                    <td>
+                        <input type="checkbox" id="sports" value="Sports">Sports
+                        <input type="checkbox" id="traveling" value="Traveling">Traveling
+                    </td>
                 </tr>
 
                 <tr>
-                    <td><label for="">Age:</label></td>
-                    <td><input type="range" min="0" max="100" value="50" step="1"></td>
+                    <td><label for="age">Age:</label></td>
+                    <td><input type="range" id="age" min="0" max="100" value="50" step="1"></td>
                 </tr>
 
                 <tr>
-                    <td colspan="2" style="text-align: center; padding-top: 50px;"><input
-                            style="color: red; border-radius: 6px; font-size: 20px;" type="reset"> &nbsp &nbsp &nbsp
-                        &nbsp
-                        <input style="color: green; border-radius: 6px; font-size: 20px;" type="submit">
+                    <td colspan="2" style="text-align: center; padding-top: 50px;">
+                        <input style="color: red; border-radius: 6px; font-size: 20px;" type="reset">
+                        &nbsp &nbsp &nbsp &nbsp
+                        <input style="color: green; border-radius: 6px; font-size: 20px;" type="submit" value="Submit">
                     </td>
                 </tr>
             </table>
-
         </form>
     </center>
 
     <script>
-        function storeData() {
+        function storeData(event) {
+            // Prevent the form from reloading the page
+            event.preventDefault();
+
             // Get form values
             const studentName = document.getElementById('studentName').value;
             const email = document.getElementById('email').value;
@@ -146,7 +151,7 @@
             alert('Data has been stored in local storage!');
         }
 
-        // Optionally: A function to retrieve and display the stored data
+        // Optional: A function to retrieve and display the stored data
         function displayStoredData() {
             const storedData = localStorage.getItem('formData');
             if (storedData) {
@@ -158,38 +163,6 @@
             }
         }
     </script>
-
-    <br><br><br>
-
-    <div>
-        <img src="./Car.jfif" alt="">
-
-        <br><br>
-        <video src="./video1.mp4" controls autoplay muted></video>
-
-        <br><br>
-
-        <iframe width="800" height="400" src="https://www.youtube.com/embed/vKq3cRvEA6Q" frameborder="0"></iframe>
-        <br><br><br>
-
-        <!-- <iframe width="656" height="369" src="https://www.youtube.com/embed/vKq3cRvEA6Q" title="Ascendion and AI"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-    </div>
-
-    <!-- <form action="">
-        <table>
-            <tr>
-                <td><label for="">Enter Student Name:</label></td>
-                <td><input type="text" style="background-color: red"></td>
-            </tr>
-            <p style="background-color: blueviolet ; color: blue;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto facere atque qui ea, beatae ducimus unde.
-                Rerum, quos nisi sed accusantium debitis accusamus dolores ipsa quia! Omnis eius tenetur impedit.</p>
-        </table>
-    </form> -->
-
-
 </body>
 
 </html>

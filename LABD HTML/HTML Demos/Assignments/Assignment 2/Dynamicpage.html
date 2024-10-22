@@ -5,7 +5,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #e0f7fa; /* Light cyan background */
+            background-color: #e0f7fa; 
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -14,12 +14,12 @@
         }
 
         .form-container {
-            background-color: #ffffff; /* White form background */
+            background-color: #ffffff; 
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
             margin-right: 50px;
-            width: 400px; /* Increased form width */
+            width: 400px; 
         }
 
         form {
@@ -38,7 +38,7 @@
         input[type="password"],
         input[type="date"] {
             padding: 8px;
-            width: 210px; /* Adjusted width */
+            width: 210px; 
             margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -46,7 +46,7 @@
 
         select, textarea {
             padding: 8px;
-            width: 220px; /* Adjusted width */
+            width: 220px; 
             margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -54,7 +54,7 @@
 
         button {
             padding: 10px 20px;
-            background-color: #00796b; /* Teal button */
+            background-color: #00796b; 
             color: white;
             border: none;
             border-radius: 5px;
@@ -62,14 +62,14 @@
         }
 
         button:hover {
-            background-color: #004d40; /* Darker teal on hover */
+            background-color: #004d40;
         }
 
         .popup {
             display: block;
             position: relative;
             padding: 20px;
-            background-color: #f9fbe7; /* Light lemon background */
+            background-color: #f9fbe7; 
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
             width: 400px;
             height: auto;
@@ -89,7 +89,7 @@
         }
 
         th {
-            background-color: #b2dfdb; /* Teal header */
+            background-color: #b2dfdb; 
         }
 
         h2 {
@@ -149,27 +149,27 @@
                 </tr>
             </thead>
             <tbody id="dynamicTableBody">
-                <!-- Table content will be dynamically updated here -->
+                
             </tbody>
         </table>
     </div>
 
     <script>
-        let dynamicData = {}; // To track the dynamically updated values
+        let dynamicData = {}; 
 
-        // Function to update the preview dynamically as the user types
+        
         function updatePreview(fieldId, label) {
             const value = document.getElementById(fieldId).value;
             dynamicData[fieldId] = { label: label, value: value };
 
-            // Remove the previous preview row if it exists
+            
             let row = document.getElementById('preview-' + fieldId);
 
             if (row) {
                 row.remove();
             }
 
-            // Only add row if the input field has a value
+            
             if (value) {
                 row = document.createElement('tr');
                 row.id = 'preview-' + fieldId;
@@ -187,11 +187,10 @@
             }
         }
 
-        // Function to submit the form and store the data
+        
         function submitForm() {
             const tableBody = document.getElementById('dynamicTableBody');
 
-            // Iterate over dynamicData and add it permanently to the table
             Object.keys(dynamicData).forEach(key => {
                 const data = dynamicData[key];
 
@@ -211,17 +210,17 @@
                 }
             });
 
-            // Clear form fields and remove the dynamic preview rows
+            
             clearForm();
         }
 
-        // Clear form fields and dynamic data
+       
         function clearForm() {
             document.getElementById('dataForm').reset();
-            dynamicData = {}; // Reset dynamic input data
+            dynamicData = {}; 
             const tableBody = document.getElementById('dynamicTableBody');
 
-            // Clear all dynamic preview rows (those with 'preview-' id)
+           
             const previewRows = tableBody.querySelectorAll('[id^="preview-"]');
             previewRows.forEach(row => row.remove());
         }
