@@ -1,7 +1,12 @@
-#body {
+/* #body {
     background-color: antiquewhite;
     width: 1000px;
     margin-left: 150px;
+    background-image: url(../assests/images/space.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
 }
 
 #form {
@@ -13,4 +18,4 @@
 .button{
     text-align: center;
     padding-top: 50px;
-}
+} */

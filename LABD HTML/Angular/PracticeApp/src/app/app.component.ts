@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  title = 'FormAngular';
+  title = 'PracticeApp';
   employees? : Employee[];
   constructor(private employeeService : EmployeeService){
   }

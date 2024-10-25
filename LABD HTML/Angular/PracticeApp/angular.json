@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FormAngular": {
+    "PracticeApp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/form-angular",
+            "outputPath": "dist/practice-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -23,21 +23,17 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public",
-                "output": "/public"
+                "input": "public"
               }
-              ,
-              {
-                "glob": "**/*",
-                "input": "src/assests",
-                "output": "/assests"
-              }
-
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -67,10 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "FormAngular:build:production"
+              "buildTarget": "PracticeApp:build:production"
             },
             "development": {
-              "buildTarget": "FormAngular:build:development"
+              "buildTarget": "PracticeApp:build:development"
             }
           },
           "defaultConfiguration": "development"

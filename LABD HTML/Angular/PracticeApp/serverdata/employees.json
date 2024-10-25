@@ -1,0 +1,56 @@
+{
+    "employees":[
+        {
+            "id":"1",
+            "name":"sandeep",
+            "salary":"500",
+            "address": "Bobbili",
+            "age" : "23",
+            "degree": "B.Tech",
+            "hobby": "Cricket",
+            "gender": "Male"
+        },
+        {
+            "id":"2",
+            "name":"uday",
+            "salary":"300",
+            "address": "vizag",
+            "age" : "20",
+            "degree": "B.Tech",
+            "hobby": "Riding",
+            "gender": "Male"
+        },
+        {
+            "id":"3",
+            "name":"Bhargav",
+            "salary":"200",
+            "address": "Hyd",
+            "age" : "21",
+            "degree": "B.Tech",
+            "hobby": "playing",
+            "gender": "Male"
+        },
+        {
+            "id":"4",
+            "name":"Harsh",
+            "salary":"200",
+            "address": "Hyd",
+            "age" : "21",
+            "degree": "B.Tech",
+            "hobby": "playing",
+            "gender": "Male"
+        },
+        {
+            "id":"5",
+            "name":"Bhodha",
+            "salary":"200",
+            "address": "Hyd",
+            "age" : "21",
+            "degree": "B.Tech",
+            "hobby": "playing",
+            "gender": "Male"
+        }
+
+
+    ]
+}
