@@ -11,4 +11,16 @@ export class EmployeeService{
     getEmployees() {
         return this.http.get<Employee[]>(this.baseUrl);
     }
+
+    addEmployee(employee: Employee) {
+        return this.http.post<Employee>(this.baseUrl, employee);
+    }
+
+    updateEmployee(employee: Employee) {
+        return this.http.put<Employee>(`${this.baseUrl}/${employee.id}`, employee);
+    }
+
+    deleteEmployee(id: number) {
+        return this.http.delete(`${this.baseUrl}/${id}`);
+    }
 }
