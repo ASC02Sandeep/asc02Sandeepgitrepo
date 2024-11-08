@@ -1,0 +1,35 @@
+<div class="container">
+    <h5>User Details</h5>
+    <div class="table-striped" style="width:800px">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>User Name</th>
+                    <th>Phone Number</th>
+                    <th>Degree</th>
+                    <th>Salary</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.phoneNumber }}</td>
+                    <td>{{ user.degree }}</td>
+                    <td>{{ user.salary }}</td>
+                    <td>{{ user.age }}</td>
+                    <td>{{ user.gender }}</td>
+                    <td>
+                        <button (click)="deleteUser(user)" class="btn btn-danger">Delete</button>
+                        <button (click)="updateUser(user.id)" class="btn btn-warning">Update</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

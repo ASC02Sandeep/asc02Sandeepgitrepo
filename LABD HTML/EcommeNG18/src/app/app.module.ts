@@ -6,9 +6,11 @@ import { AppRoutingModule } from "./app-routing.module";
 import { LoginComponent } from "./login/login.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ListEmpComponent } from "./list-emp/list-emp.component";
+import { UpdateEmpComponent } from "./update-emp/update-emp.component";
+import { RegisterComponent } from "./register/register.component";
 
 @NgModule({
-    declarations:[AppComponent, LoginComponent, ListEmpComponent],
+    declarations:[AppComponent, LoginComponent, ListEmpComponent, UpdateEmpComponent, RegisterComponent],
     imports: [BrowserModule,AppRoutingModule, ReactiveFormsModule, HttpClientModule,FormsModule],
     bootstrap : [AppComponent]
 })

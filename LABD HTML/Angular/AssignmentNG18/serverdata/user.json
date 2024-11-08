@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Sandeep",
+      "phoneNumber": "1234567890",
+      "degree": "B.Tech",
+      "gender": "Male",
+      "salary": "500",
+      "age": "30"
+    },
+    {
+      "id": "2",
+      "name": "Uday",
+      "phoneNumber": "0987654321",
+      "degree": "MCA",
+      "gender": "Male",
+      "salary": "400",
+      "age": "25"
+    },
+  {
+    "id": "3",
+    "name": "Bhargav",
+    "phoneNumber": "1122334455",
+    "degree": "B.Sc",
+    "gender": "Male",
+    "salary": "300",
+    "age": "28"
+  }
+  ]
+}
