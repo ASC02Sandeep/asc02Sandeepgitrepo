@@ -1,0 +1,21 @@
+.container {
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px 0; /* Reduced padding for a smaller footer height */
+  font-size: 14px;  /* Adjust font size if needed */
+  height: 60px;
+  
+}
+
+.footer .container {
+  padding: 0; /* Remove additional padding inside the footer */
+}
