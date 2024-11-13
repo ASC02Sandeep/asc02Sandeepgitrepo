@@ -8,30 +8,38 @@ import { Router } from '@angular/router';
   templateUrl: './list-users.component.html',
   styleUrls: ['./list-users.component.css']
 })
+
 export class ListUsersComponent implements OnInit {
+  users: User[] = [];
+  searchQuery: string = '';
 
-  users!: User[];  // Array to hold list of users
-  userService: UserService;  // Declare user service
-
-  constructor(userService: UserService, private router: Router) {
-    this.userService = userService;
-  }
+  constructor(
+    private userService: UserService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    // Fetch users from the service on component initialization
     if (!sessionStorage.getItem("loggedIn")) {
-      this.router.navigate(["/login"]);  // Redirect to login if not logged in
+      this.router.navigate(["/login"]);
     } else {
-      this.userService.getUsers().subscribe((userData) => {
-        this.users = userData;  // Populate users data
-      });
+      this.fetchUsers();
     }
+  }
+
+  private fetchUsers(): void {
+    this.userService.getUsers().subscribe(
+      (userData) => {
+        this.users = userData;
+      },
+      (error) => {
+        console.error('Error fetching user data:', error);
+      }
+    );
   }
 
   deleteUser(toDeleteUser: User): void {
     if (toDeleteUser.id !== undefined) {
       this.userService.deleteUser(toDeleteUser.id).subscribe(() => {
-        // Remove deleted user from the list
         this.users = this.users.filter(user => user.id !== toDeleteUser.id);
       });
     }
@@ -39,9 +47,22 @@ export class ListUsersComponent implements OnInit {
 
   updateUser(userId: number | undefined): void {
     if (userId !== undefined) {
-      this.router.navigate(['update', userId]);  // Navigate to update page
+      this.router.navigate(['update', userId]);
     } else {
-      console.log("User ID is undefined");
+      console.error("User ID is undefined");
+    }
+  }
+
+  searchUsers() {
+    if (!this.searchQuery) {
+      this.fetchUsers();  // Fetch all users if search query is empty
+    } else {
+      this.users = this.users.filter(user => 
+        user.name?.toLowerCase().includes(this.searchQuery.toLowerCase()) || 
+        user.id?.toString().includes(this.searchQuery)
+      );
     }
   }
 }
+
+
