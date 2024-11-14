@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "title": "Login Page Error",
+      "description": "Users are unable to log",
+      "priority": "High",
+      "status": "Open",
+      "assignee": "Uday",
+      "date": "2024-11-13"
+    },
+    {
+      "id": "2",
+      "title": "Angular Issue",
+      "description": "Angular is not working properly",
+      "priority": "Medium",
+      "status": "In Progress",
+      "assignee": "Bhargav",
+      "date": "2024-11-13"
+    },
+    {
+      "id": "3",
+      "title": "Component issue",
+      "description": "Components are not imported",
+      "priority": "Low",
+      "status": "Resolved",
+      "assignee": "Sandeep",
+      "date": "2024-01-01"
+    },
+    {
+      "id": "4",
+      "title": "NodeModule Issue",
+      "description": "Node Modules are missing",
+      "priority": "High",
+      "status": "Resolved",
+      "assignee": "Subbu",
+      "date": "2024-11-03"
+    },
+    {
+      "id": "2ce1",
+      "title": "Checkbox Issue",
+      "description": "Checkbox is not working properly",
+      "priority": "Low",
+      "status": "In Progress",
+      "assignee": "Rajat",
+      "date": "2023-05-01"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+.main-content {
+    min-height: calc(100vh - 160px); 
+    padding: 0px;
+   
+  }
+  
+  .footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    font-size: 15px;
+    height: 100px;
+  }
+  
+  .navbar {
+    margin-bottom: 0;
+    height: 100px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+  }
+  
+  .nav-link{
+    color: rgb(241, 218, 10);
+  }
