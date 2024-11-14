@@ -59,7 +59,10 @@ export class ListUsersComponent implements OnInit {
     } else {
       this.users = this.users.filter(user => 
         user.title?.toLowerCase().includes(this.searchQuery.toLowerCase()) ||  
-        user.id?.toString().includes(this.searchQuery)                        
+        user.id?.toString().includes(this.searchQuery) ||
+        user.status?.toLowerCase().includes(this.searchQuery.toLowerCase()) ||  
+        user.priority?.toLowerCase().includes(this.searchQuery.toLowerCase()) ||  
+        user.assignee?.toLowerCase().includes(this.searchQuery.toLowerCase())                       
       );
     }
   }

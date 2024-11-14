@@ -52,7 +52,7 @@ export class UpdateUserComponent implements OnInit {
     if (this.updateForm.valid) {
       const updatedIssue = this.updateForm.getRawValue(); 
       this.userService.updateUser(updatedIssue.id, updatedIssue).subscribe(
-        () => {
+        (user) => {
           this.router.navigate(['/list-users']);
         },
         (error) => {
