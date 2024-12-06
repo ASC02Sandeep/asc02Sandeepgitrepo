@@ -1,0 +1,57 @@
+<div class="container mt-5">
+    <h2 class="text-center">Add Review</h2>
+    <form [formGroup]="reviewForm" (ngSubmit)="submitForm()">
+      <!-- Hotel Name -->
+      <div class="form-group">
+        <label for="hotelName">Hotel Name</label>
+        <input
+          type="text"
+          id="hotelName"
+          formControlName="hotelName"
+          class="form-control"
+          placeholder="Enter Hotel Name"
+        />
+        <div *ngIf="reviewForm.get('hotelName')?.invalid && reviewForm.get('hotelName')?.touched" class="text-danger">
+          Hotel name is required.
+        </div>
+      </div>
+  
+      <!-- Rating -->
+      <div class="form-group">
+        <label for="rating">Rating</label>
+        <input
+          type="number"
+          id="rating"
+          formControlName="rating"
+          class="form-control"
+          placeholder="Enter Rating (1-5)"
+          min="1"
+          max="5"
+        />
+        <div *ngIf="reviewForm.get('rating')?.invalid && reviewForm.get('rating')?.touched" class="text-danger">
+          Rating must be between 1 and 5.
+        </div>
+      </div>
+  
+      <!-- Comments -->
+      <div class="form-group">
+        <label for="comments">Comments</label>
+        <textarea
+          id="comments"
+          formControlName="comments"
+          class="form-control"
+          placeholder="Enter Comments"
+          rows="3"
+        ></textarea>
+        <div *ngIf="reviewForm.get('comments')?.invalid && reviewForm.get('comments')?.touched" class="text-danger">
+          Comments are required.
+        </div>
+      </div>
+  
+      <!-- Buttons -->
+      <button type="submit" class="btn btn-success w-100" [disabled]="reviewForm.invalid">
+        Submit Review
+      </button>
+    </form>
+  </div>
+  

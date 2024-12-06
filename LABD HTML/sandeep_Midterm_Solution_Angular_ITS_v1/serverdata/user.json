@@ -3,11 +3,11 @@
     {
       "id": "1",
       "title": "Login Page Error",
-      "description": "Users are unable to log",
-      "priority": "High",
-      "status": "Open",
-      "assignee": "Uday",
-      "date": "2024-11-13"
+      "description": "Register",
+      "priority": "Low",
+      "status": "In Progress",
+      "assignee": "sandy",
+      "date": "2024-11-01"
     },
     {
       "id": "2",
@@ -28,22 +28,13 @@
       "date": "2024-01-01"
     },
     {
-      "id": "4",
-      "title": "NodeModule Issue",
-      "description": "Node Modules are missing",
-      "priority": "Medium",
-      "status": "Resolved",
-      "assignee": "Subbu",
-      "date": "2024-11-03"
-    },
-    {
-      "id": "2ce1",
-      "title": "Checkbox Issue",
-      "description": "Checkbox is not working properly",
+      "id": "f6ec",
+      "title": "hdfds",
+      "description": "reduff",
       "priority": "Low",
       "status": "In Progress",
-      "assignee": "Rajat",
-      "date": "2023-05-01"
+      "assignee": "sandeep",
+      "date": "2024-11-01"
     }
   ]
 }

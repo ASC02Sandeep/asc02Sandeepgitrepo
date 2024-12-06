@@ -1,0 +1,152 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "email": "admin@example.com",
+      "password": "Admin@123",
+      "phone": "1234567890"
+    },
+    {
+      "id": "2",
+      "name": "Sandeep",
+      "email": "asd@gmail.com",
+      "password": "Sandy@630",
+      "phone": "1234524314"
+    },
+    {
+      "id": "3",
+      "name": "Sandeep",
+      "email": "zxc@gmail.com",
+      "password": "Dsa@1675",
+      "phone": "2334421324"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "B0001",
+      "guestName": "John Doe",
+      "hotel": "Grand Plaza Hotel",
+      "roomNumber": "101",
+      "checkInDate": "2024-11-01",
+      "checkOutDate": "2024-11-05",
+      "status": "Confirmed"
+    },
+    {
+      "id": "B0002",
+      "guestName": "Jane Smith",
+      "hotel": "Ocean View Resort",
+      "roomNumber": "102",
+      "checkInDate": "2024-11-03",
+      "checkOutDate": "2024-11-07",
+      "status": "Confirmed"
+    },
+    {
+      "id": "B0003",
+      "guestName": "Sandeep",
+      "hotel": "Mountain Inn",
+      "roomNumber": "303",
+      "checkInDate": "2024-11-09",
+      "checkOutDate": "2024-11-16",
+      "status": "Confirmed"
+    }
+  ],
+  "hotels": [
+    {
+      "id": "H0001",
+      "name": "Grand Plaza Hotel",
+      "location": "New York",
+      "roomsAvailable": 50,
+      "rating": 5
+    },
+    {
+      "name": "Ocean View Resort",
+      "location": "California",
+      "roomsAvailable": 8,
+      "rating": 5,
+      "id": "H0002"
+    },
+    {
+      "name": "Hotel Taj",
+      "location": "Mumbai",
+      "roomsAvailable": 5,
+      "rating": 2,
+      "id": "H0003"
+    }
+  ],
+  "reviews": [
+    {
+      "hotelName": "Grand Plaza Hotel",
+      "rating": 5,
+      "comments": "Excellent service and amenities!",
+      "id": "9bd6"
+    },
+    {
+      "hotelName": "Ocean View Resort",
+      "rating": 4,
+      "comments": "Beautiful location and great staff.",
+      "id": "29f1"
+    },
+    {
+      "id": "0d71",
+      "hotelName": "vds",
+      "rating": 3,
+      "comments": "good"
+    }
+  ],
+  "guests": [
+    {
+      "id": "G0001",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "phone": "1234567890",
+      "address": "123 Main St, New York",
+      "roomNumber": "101"
+    },
+    {
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "phone": "9876543210",
+      "address": "456 Park Ave, California",
+      "roomNumber": "203",
+      "id": "G0002"
+    }
+  ],
+  "facilities": [
+    {
+      "hotelName": "Grand Plaza Hotel",
+      "facilityType": "Swimming Pool",
+      "availability": "Available",
+      "description": "A large pool with clean water and lounge chairs.",
+      "id": "d222"
+    },
+    {
+      "hotelName": "Ocean View Resort",
+      "facilityType": "Gym",
+      "availability": "Available",
+      "description": "A well-equipped gym with personal trainers.",
+      "id": "819a"
+    },
+    {
+      "id": "675e",
+      "hotelName": "ocean",
+      "facilityType": "Swimming pool",
+      "availability": "Available",
+      "description": "snkejd mednkd"
+    },
+    {
+      "id": "9ce3",
+      "hotelName": "ocean",
+      "facilityType": "Swimming pool",
+      "availability": "Available",
+      "description": "skjs skskjs"
+    },
+    {
+      "id": "1a69",
+      "hotelName": "vds",
+      "facilityType": "Swimming pool",
+      "availability": "Available",
+      "description": "hshsy sljdjd"
+    }
+  ]
+}

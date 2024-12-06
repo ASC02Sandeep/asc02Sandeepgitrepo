@@ -1,0 +1,16 @@
+package inheritance;
+
+public class MultipleInheritance {
+    public static void main(String[] args) {
+        
+    }
+}
+
+class Camera{
+    
+}
+
+class MusicPlayer{
+
+}
+
