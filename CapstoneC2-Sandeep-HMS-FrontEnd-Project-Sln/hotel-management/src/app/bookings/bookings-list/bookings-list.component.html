@@ -1,0 +1,57 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+  <a class="navbar-brand" routerLink="/home">HMS</a>
+  <div class="ml-auto">
+    <a class="btn btn-light mr-3" routerLink="/bookings/add">Add Booking</a> 
+    <a class="btn btn-outline-light" routerLink="/home">Home</a>
+  </div>
+</nav>
+
+<!-- Search Input -->
+<div class="container search-container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <input
+        type="text"
+        class="form-control search-input"
+        placeholder="Search by any field (ID, Name, etc.)"
+        [(ngModel)]="searchText"
+        (input)="filterBookings()"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- Bookings List -->
+<div class="container mt-4">
+  <h2 class="text-center text-dark mb-4">Bookings List</h2>
+  <table class="table table-hover table-bordered shadow-sm">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Guest Name</th>
+        <th>Hotel</th>
+        <th>Room Number</th>
+        <th>Check-In</th>
+        <th>Check-Out</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of filteredBookings">
+        <td>{{ booking.id }}</td>
+        <td>{{ booking.guestName }}</td>
+        <td>{{ booking.hotel }}</td>
+        <td>{{ booking.roomNumber }}</td>
+        <td>{{ booking.checkInDate }}</td>
+        <td>{{ booking.checkOutDate }}</td>
+        <td>{{ booking.status }}</td>
+        <td>
+          <button class="btn btn-warning btn-sm mr-2" (click)="editBooking(booking.id!)">Update</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteBooking(booking.id!)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

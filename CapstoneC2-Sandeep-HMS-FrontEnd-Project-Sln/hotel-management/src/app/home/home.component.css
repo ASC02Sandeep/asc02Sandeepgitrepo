@@ -1,0 +1,136 @@
+/* General Styles for the Home Page */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styles */
+.custom-navbar {
+  background-color: #89e177; /* Light color navbar */
+  padding: 15px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for separation */
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.navbar-brand:hover {
+  color: #007bff;
+}
+
+.navbar-nav {
+  margin-left: 600px;
+}
+
+.nav-item .btn-outline-danger {
+  color: #1519e5;
+  border-color: #343a40;
+  background-color: transparent;
+}
+
+.nav-item .btn-outline-danger:hover {
+  color: #ffffff;
+  background-color: #dc3545; /* Red color for logout on hover */
+  border-color: #dc3545;
+}
+
+/* Main Content Section */
+.container {
+  margin-top: 120px; /* Ensure content is not hidden under the navbar */
+  padding-bottom: 50px; /* Space to avoid overlap with footer */
+}
+
+/* Heading for Dashboard */
+h2 {
+  color: #343a40;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 30px; /* Move heading down below navbar */
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Cards */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  min-height: 220px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Icon */
+.card-icon {
+  font-size: 3rem; /* Increased size of icons */
+  margin-bottom: 20px;
+  color: #6f42c1; /* Purple color for icons */
+}
+
+/* Card Title */
+.card-body h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+/* Description Text */
+.card-body p {
+  font-size: 0.8rem;
+  color: #6c757d; /* Light grey text */
+  margin-bottom: 15px;
+}
+
+/* Button Styling */
+.card button {
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Layout for Cards */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col-md-4, .col-md-6 {
+  flex: 1;
+  min-width: 250px; /* Smaller width for cards */
+  margin-bottom: 20px;
+}
+
+.mt-4 {
+  margin-top: 40px;
+}
