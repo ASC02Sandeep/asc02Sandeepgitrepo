@@ -8,7 +8,7 @@ body {
 
 /* Navbar Styles */
 .custom-navbar {
-  background-color: #3ba4e4; /* Light color navbar */
+  background-color: #40b95c; /* Light color navbar */
   padding: 15px 20px;
   position: fixed;
   width: 100%;
@@ -54,7 +54,7 @@ h2 {
   color: #343a40;
   font-size: 2.5rem;
   font-weight: bold;
-  margin-top: 80px; /* Move heading down below navbar */
+  margin-top: 30px; /* Move heading down below navbar */
   margin-bottom: 30px;
   text-align: center;
 }

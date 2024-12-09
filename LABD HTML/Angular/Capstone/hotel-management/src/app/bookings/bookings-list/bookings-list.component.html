@@ -1,23 +1,19 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
   <a class="navbar-brand" routerLink="/home">HMS</a>
-  <ul class="navbar-nav ml-auto">
-    <li class="nav-item">
-      <a class="btn btn-primary mr-2" routerLink="/bookings/add">Add Booking</a>
-    </li>
-    <li class="nav-item">
-      <a class="btn btn-secondary" routerLink="/home">Home</a>
-    </li>
-  </ul>
+  <div class="ml-auto">
+    <a class="btn btn-light mr-3" routerLink="/bookings/add">Add Booking</a> 
+    <a class="btn btn-outline-light" routerLink="/home">Home</a>
+  </div>
 </nav>
 
 <!-- Search Input -->
-<div class="container mt-3">
-  <div class="row">
-    <div class="col-md-6 offset-md-3">
+<div class="container search-container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
       <input
         type="text"
-        class="form-control"
+        class="form-control search-input"
         placeholder="Search by any field (ID, Name, etc.)"
         [(ngModel)]="searchText"
         (input)="filterBookings()"
@@ -27,10 +23,10 @@
 </div>
 
 <!-- Bookings List -->
-<div class="container mt-3">
-  <h2 class="text-center">Bookings List</h2>
-  <table class="table table-bordered">
-    <thead>
+<div class="container mt-4">
+  <h2 class="text-center text-dark mb-4">Bookings List</h2>
+  <table class="table table-hover table-bordered shadow-sm">
+    <thead class="thead-dark">
       <tr>
         <th>ID</th>
         <th>Guest Name</th>
@@ -52,7 +48,7 @@
         <td>{{ booking.checkOutDate }}</td>
         <td>{{ booking.status }}</td>
         <td>
-          <button class="btn btn-warning btn-sm" (click)="editBooking(booking.id!)">Update</button>
+          <button class="btn btn-warning btn-sm mr-2" (click)="editBooking(booking.id!)">Update</button>
           <button class="btn btn-danger btn-sm" (click)="deleteBooking(booking.id!)">Delete</button>
         </td>
       </tr>

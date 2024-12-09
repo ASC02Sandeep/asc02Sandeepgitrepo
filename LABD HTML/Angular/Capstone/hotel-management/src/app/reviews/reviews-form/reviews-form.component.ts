@@ -32,4 +32,7 @@ export class ReviewsFormComponent implements OnInit {
       });
     }
   }
+  cancel(): void {
+    this.router.navigate(['/reviews']);
+  }
 }

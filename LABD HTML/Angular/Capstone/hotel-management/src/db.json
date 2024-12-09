@@ -88,10 +88,10 @@
       "id": "29f1"
     },
     {
-      "id": "0d71",
-      "hotelName": "vds",
-      "rating": 3,
-      "comments": "good"
+      "id": "8e63",
+      "hotelName": "Banjara",
+      "rating": 4,
+      "comments": "Good Management overall"
     }
   ],
   "guests": [
@@ -128,25 +128,11 @@
       "id": "819a"
     },
     {
-      "id": "675e",
-      "hotelName": "ocean",
-      "facilityType": "Swimming pool",
+      "id": "f4d4",
+      "hotelName": "Banjara",
+      "facilityType": "Play Arena",
       "availability": "Available",
-      "description": "snkejd mednkd"
-    },
-    {
-      "id": "9ce3",
-      "hotelName": "ocean",
-      "facilityType": "Swimming pool",
-      "availability": "Available",
-      "description": "skjs skskjs"
-    },
-    {
-      "id": "1a69",
-      "hotelName": "vds",
-      "facilityType": "Swimming pool",
-      "availability": "Available",
-      "description": "hshsy sljdjd"
+      "description": "Play Arena available for sports"
     }
   ]
 }

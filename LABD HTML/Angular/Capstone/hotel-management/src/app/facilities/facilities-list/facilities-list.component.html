@@ -1,37 +1,31 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" routerLink="/home">HMS</a>
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="btn btn-secondary" routerLink="/home">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="btn btn-primary mr-2" routerLink="/facilities/add">Add Facility</a>
-      </li>
-      
-    </ul>
-  </nav>
-  
-  <!-- Facilities List -->
-  <div class="container mt-3">
-    <h2 class="text-center">Facilities List</h2>
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>Hotel Name</th>
-          <th>Facility Type</th>
-          <th>Availability</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let facility of facilities">
-          <td>{{ facility.hotelName }}</td>
-          <td>{{ facility.facilityType }}</td>
-          <td>{{ facility.availability }}</td>
-          <td>{{ facility.description }}</td>
-        </tr>
-      </tbody>
-    </table>
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+  <a class="navbar-brand" routerLink="/home">HMS</a>
+  <div class="ml-auto">
+    <a class="btn btn-light mr-3" routerLink="/facilities/add">Add Facility</a>
+    <a class="btn btn-outline-light" routerLink="/home">Home</a>
   </div>
-  
+</nav>
+
+<!-- Facilities List -->
+<div class="container mt-3">
+  <h2 class="text-center">Facilities List</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Hotel Name</th>
+        <th>Facility Type</th>
+        <th>Availability</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let facility of facilities">
+        <td>{{ facility.hotelName }}</td>
+        <td>{{ facility.facilityType }}</td>
+        <td>{{ facility.availability }}</td>
+        <td>{{ facility.description }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
