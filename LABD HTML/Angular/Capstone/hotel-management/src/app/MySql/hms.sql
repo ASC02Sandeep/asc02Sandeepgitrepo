@@ -36,3 +36,11 @@ INSERT INTO booking (id, guest_name, hotel, room_number, check_in_date, check_ou
 ('B0003', 'Sandeep', 'Mountain Inn', '303', '2024-11-09', '2024-11-16', 'Confirmed');
 
 SELECT * FROM booking;
+
+CREATE TABLE hotels (
+    id VARCHAR(10) PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    location VARCHAR(255),
+    rooms_available INT,
+    rating FLOAT
+);
