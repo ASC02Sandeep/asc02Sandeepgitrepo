@@ -1,0 +1,78 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light custom-navbar fixed-top">
+  <a class="navbar-brand" routerLink="/home">Hotel Managemement System</a>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <button class="btn btn-outline-danger" (click)="logout()">Logout</button>
+    </li>
+  </ul>
+</nav>
+
+<!-- Main Content Section -->
+<div class="container mt-5 pt-5">
+  <h2 class="text-center text-dark mb-4">Hotel Management System Dashboard</h2>
+
+  <div class="row">
+    <!-- Bookings Section -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body text-center">
+          <span class="card-icon">📅</span>
+          <h5>Bookings</h5>
+          <p class="text-muted">Manage and view bookings for guests.</p>
+          <button class="btn btn-light w-100" (click)="navigateTo('bookings')">Click Here</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hotels Section -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body text-center">
+          <span class="card-icon">🏨</span>
+          <h5>Hotels</h5>
+          <p class="text-muted">Manage hotel details and view properties.</p>
+          <button class="btn btn-light w-100" (click)="navigateTo('hotels')">Click Here</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Guests Section -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body text-center">
+          <span class="card-icon">👥</span>
+          <h5>Guests</h5>
+          <p class="text-muted">Manage and view guest details.</p>
+          <button class="btn btn-light w-100" (click)="navigateTo('guests')">Click Here</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Facilities Section -->
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body text-center">
+          <span class="card-icon">🛎️</span>
+          <h5>Facilities</h5>
+          <p class="text-muted">View and manage facilities available at the hotel.</p>
+          <button class="btn btn-light w-100" (click)="navigateTo('facilities')">Click Here</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body text-center">
+          <span class="card-icon">⭐</span>
+          <h5>Reviews</h5>
+          <p class="text-muted">View guest reviews and ratings for the hotel.</p>
+          <button class="btn btn-light w-100" (click)="navigateTo('reviews')">Click Here</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

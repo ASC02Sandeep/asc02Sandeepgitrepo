@@ -1,0 +1,97 @@
+<div class="container mt-5">
+  <h2 class="text-center">{{ editingId ? 'Update Booking' : 'Add Booking' }}</h2>
+  <form [formGroup]="bookingForm" (ngSubmit)="submitForm()">
+    <!-- Guest Name -->
+    <div class="form-group">
+      <label for="guestName">Guest Name</label>
+      <input
+        type="text"
+        id="guestName"
+        formControlName="guestName"
+        class="form-control"
+        placeholder="Enter Guest Name"
+      />
+      <div *ngIf="bookingForm.get('guestName')?.invalid && bookingForm.get('guestName')?.touched" class="text-danger">
+        Guest Name is required.
+      </div>
+    </div>
+
+    <!-- Hotel -->
+    <div class="form-group">
+      <label for="hotel">Hotel</label>
+      <input
+        type="text"
+        id="hotel"
+        formControlName="hotel"
+        class="form-control"
+        placeholder="Enter Hotel Name"
+      />
+      <div *ngIf="bookingForm.get('hotel')?.invalid && bookingForm.get('hotel')?.touched" class="text-danger">
+        Hotel is required.
+      </div>
+    </div>
+
+    <!-- Room Number -->
+    <div class="form-group">
+      <label for="roomNumber">Room Number</label>
+      <input
+        type="text"
+        id="roomNumber"
+        formControlName="roomNumber"
+        class="form-control"
+        placeholder="Enter Room Number"
+      />
+      <div *ngIf="bookingForm.get('roomNumber')?.invalid && bookingForm.get('roomNumber')?.touched" class="text-danger">
+        Room Number is required.
+      </div>
+    </div>
+
+    <!-- Check-In Date -->
+    <div class="form-group">
+      <label for="checkInDate">Check-In Date</label>
+      <input
+        type="date"
+        id="checkInDate"
+        formControlName="checkInDate"
+        class="form-control"
+      />
+      <div *ngIf="bookingForm.get('checkInDate')?.invalid && bookingForm.get('checkInDate')?.touched" class="text-danger">
+        Check-In Date is required.
+      </div>
+    </div>
+
+    <!-- Check-Out Date -->
+    <div class="form-group">
+      <label for="checkOutDate">Check-Out Date</label>
+      <input
+        type="date"
+        id="checkOutDate"
+        formControlName="checkOutDate"
+        class="form-control"
+      />
+      <div *ngIf="bookingForm.get('checkOutDate')?.invalid && bookingForm.get('checkOutDate')?.touched" class="text-danger">
+        Check-Out Date is required.
+      </div>
+    </div>
+
+    <!-- Status -->
+    <div class="form-group">
+      <label for="status">Status</label>
+      <select id="status" formControlName="status" class="form-control">
+        <option value="" disabled>Select Status</option>
+        <option value="Confirmed">Confirmed</option>
+        <option value="Pending">Pending</option>
+        <option value="Cancelled">Cancelled</option>
+      </select>
+      <div *ngIf="bookingForm.get('status')?.invalid && bookingForm.get('status')?.touched" class="text-danger">
+        Status is required.
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <button type="submit" class="btn btn-success w-100" [disabled]="bookingForm.invalid">
+      {{ editingId ? 'Update Booking' : 'Add Booking' }}
+    </button>
+    <button type="button" class="btn btn-secondary w-100 mt-3" (click)="cancel()">Cancel</button>
+  </form>
+</div>
